@@ -1,0 +1,18 @@
+<%- include('partials/header'); -%>
+
+<h1>Home</h1>
+<br>
+<p><%= home %></p>
+<br>
+
+<% copyMessages.forEach(function(newMessage){ %>
+<h1><%= newMessage.title %></h1>
+<br>
+
+<% const maxLength = 100; %>
+<% const maxBody = newMessage.body.substring(0, maxLength); %>
+<p><%= maxBody %> <a href="/post/<%= newMessage._id %>">Read More</a></p>
+<br>
+<% }); %>
+
+<%- include('partials/footer'); -%>

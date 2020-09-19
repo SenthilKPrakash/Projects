@@ -1,0 +1,14 @@
+<%- include('partials/header'); -%>
+
+<h1>Compose</h1>
+<form action="/remove" method="POST">
+
+    <div class="form-group">
+        <label for="titleText">Title</label>
+        <input type="text" class="form-control" name="titleMessage" id="titleText">
+    </div>
+
+    <button type="sumbit" class="btn btn-primary" name="publish">Remove this Blog</button>
+</form>
+
+<%- include('partials/footer'); -%>
